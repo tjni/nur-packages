@@ -1,5 +1,7 @@
 {
-  # Add your overlays here
+  # Tracks the most up-to-date commits of the Caddy web server.
   #
-  # my-overlay = import ./my-overlay;
+  #   https://github.com/caddyserver/caddy
+  #
+  caddy-current = import ./caddy-current;
 }
