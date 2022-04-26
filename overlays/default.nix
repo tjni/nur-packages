@@ -10,10 +10,4 @@
   #   https://github.com/direnv/direnv
   #
   direnv-current = import ./direnv-current;
-
-  # My forked version of pueue with changes that have not yet been upstreamed.
-  #
-  #   https://github.com/tjni/pueue
-  #
-  tjni-pueue = import ./tjni-pueue;
 }

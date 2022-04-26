@@ -50,7 +50,7 @@ with builtins; let
 
   overlayPkgs = attrValues (
     with overlayNixPkgs; {
-      inherit caddy pueue;
+      inherit caddy direnv;
     }
   );
 in rec {
