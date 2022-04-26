@@ -43,8 +43,18 @@ with builtins; let
       (map (n: nameValuePair n nurAttrs.${n})
         (filter (n: !isReserved n)
           (attrNames nurAttrs))));
+
+  overlayNixPkgs = import <nixpkgs> {
+    overlays = attrValues nurAttrs.overlays;
+  };
+
+  overlayPkgs = attrValues (
+    with overlayNixPkgs; {
+      inherit caddy pueue;
+    }
+  );
 in rec {
-  buildPkgs = filter isBuildable nurPkgs;
+  buildPkgs = filter isBuildable (nurPkgs ++ overlayPkgs);
   cachePkgs = filter isCacheable buildPkgs;
 
   buildOutputs = concatMap outputsOf buildPkgs;

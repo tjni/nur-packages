@@ -19,6 +19,11 @@ final: prev: {
             // {
               inherit pname version src;
               cargoSha256 = "sha256-b5jGTu55mDw2I7ut8doD7F6iM4R8K7X9l8/vUxZ30sc=";
+
+              # These changes probably break something. I need them for a local
+              # project, but they should probably not be used by others.
+              #
+              doCheck = false;
             });
       };
   in
