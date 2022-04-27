@@ -1,13 +1,13 @@
 final: prev: {
   caddy = let
-    rev = "a8bb4a665af358f61a7ac0eabac8df2110cb6a36";
+    rev = "3ab648382d403cdfe5c0c7218fafe2b4197ccfd7";
     version = "2.5.0-${builtins.substring 0 11 rev}";
 
     src = prev.fetchFromGitHub {
       owner = "caddyserver";
       repo = "caddy";
       inherit rev;
-      sha256 = "sha256-V9iIz/93n6EBJZ9v3MDKD6FivtplRFN9a/e0o7YX0/w=";
+      sha256 = "sha256-qY/kveKZz9I18cIaZA9NcjEdETYXYPLurFNNOrst2Dk=";
     };
 
     overriddenBuildGoModule = args:
