@@ -51,6 +51,7 @@ with builtins; let
   overlayPkgs = attrValues (
     with overlayNixPkgs; {
       inherit caddy direnv;
+      inherit (nodePackages) pnpm;
     }
   );
 in rec {
