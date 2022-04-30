@@ -1,0 +1,19 @@
+diff --git a/autoload/SpaceVim.vim b/autoload/SpaceVim.vim
+index 0ed12665..72cd12dc 100644
+--- a/autoload/SpaceVim.vim
++++ b/autoload/SpaceVim.vim
+@@ -874,13 +874,7 @@ let g:spacevim_filetree_direction             = 'right'
+ let g:spacevim_sidebar_direction        = ''
+ ""
+ " The default plugin manager of SpaceVim.
+-" if has patch 7.4.2071, the default value is dein. Otherwise it is neobundle.
+-" Options are dein, neobundle, or vim-plug.
+-if has('patch-7.4.2071')
+-  let g:spacevim_plugin_manager          = 'dein'
+-else
+-  let g:spacevim_plugin_manager          = 'neobundle'
+-endif
++let g:spacevim_plugin_manager           = ''
+ 
+ ""
+ " @section plugin_manager_processes, options-plugin_manager_processes

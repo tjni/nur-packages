@@ -16,4 +16,13 @@
   #   https://github.com/pnpm/pnpm
   #
   pnpm-current = import ./pnpm-current;
+
+  # Adds patches that better support SpaceVim in a Nix environment.
+  #
+  # In particular:
+  #
+  #   1. Lets SpaceVim be installed as a Vim package.
+  #   2. Disables helptag generation on startup.
+  #
+  SpaceVim = import ./SpaceVim;
 }
