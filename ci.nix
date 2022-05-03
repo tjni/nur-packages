@@ -52,7 +52,7 @@ with builtins; let
     with overlayNixPkgs; {
       inherit caddy direnv;
       inherit (nodePackages) pnpm;
-      inherit (vimPackages) SpaceVim;
+      inherit (vimPlugins) SpaceVim;
     }
   );
 in rec {
