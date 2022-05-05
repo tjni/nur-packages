@@ -13,10 +13,10 @@ in {
   pnpm = nodeEnv.buildNodePackage {
     name = "pnpm";
     packageName = "pnpm";
-    version = "7.0.0";
+    version = "7.5.1";
     src = fetchurl {
-      url = "https://registry.npmjs.org/pnpm/-/pnpm-7.0.0.tgz";
-      sha256 = "sha256-S5Jm3pA3ts7sIEvFXWRU6XFzjeUeLPx5WgwGRjG/QXA=";
+      url = "https://registry.npmjs.org/pnpm/-/pnpm-7.5.1.tgz";
+      sha256 = "GTVT6w+Aaqlr97E8KyQTGoteXDQnVHS1tuC+wwvEYgs=";
     };
     buildInputs = globalBuildInputs;
     meta = {
